@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* color-ways */
+:root {
+    --background-color: #FAFAFA;
+    --text-color: #141010;
+    --text-color-secondary: #0672F3;
+    --text-color-optional: #ffffff;
+    --nav-bar: rgb(255, 255, 255);
+    --card-color-primary: #F7F6F9;
+    --card-color-secondary: #efeff2;
+    --rating-card: #312222;
+    --border-color: #DDD1D1;
+    --option: #ffffff;
+}
+
+#darkmode {
+    --background-color: #141010;       
+    --text-color: #FAFAFA;             
+    --text-color-secondary: #4DA3FF;
+    --text-color-optional: #FAFAFA;  
+    --nav-bar: #1E1A1A;           
+    --card-color-primary: #1C1717;  
+    --card-color-secondary: #262020; 
+    --rating-card: #fcfafa;   
+    --border-color: #3A2E2E;            /* soft, not pure white border */
+    --option: #1E1A1A;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding: 80px;
@@ -10,8 +37,8 @@ body {
     margin: 0;
     padding: 0 15px;
     box-sizing: border-box;
-    background-color: #FAFAFA;
-    color: #141010;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     flex-wrap: wrap;
     font-family: "Inter", sans-serif;
@@ -22,8 +49,8 @@ body {
 .nav-bar {
     width: 100%;
     overflow: hidden;
-    background-color: rgb(255, 255, 255);
-    border: 0.5px solid gray;
+    background-color: var(--nav-bar);
+    border: 0.5px solid var(--border-color);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -67,7 +94,7 @@ body {
 .nav-links ul li a {
     text-decoration: none;
     padding: 20px 25px;
-    color: #141010;
+    color: var(--text-color);
     font-family: "Public Sans", sans-serif;
     font-size: 1.12rem;
     transition: all .2s ease;
@@ -89,17 +116,17 @@ body {
 .action-btn a {
     text-decoration: none;
     padding: 10px 18px;
-    border: 0.7px solid #141010;
+    border: 0.7px solid var(--border-color);
     border-radius: 8px;
     font-size: 1rem;
-    color: #141010;
-    background-color: #ffffff;
+    color: var(--text-color);
+    background-color: var(--option);
     transition: all .3s ease;
 }
 
 .action-btn a:hover {
     color: #ffffff;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--text-color);
 }
 
 .nav-toggle {
@@ -116,7 +143,7 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: #141010;
+    background-color: var(--text-color);
     border-radius: 2px;
 }
 
@@ -162,7 +189,7 @@ body {
 .hero-infor span {
     font-size: 1.12rem;
     padding: 10px 24px;
-    border: .5px solid #141010;
+    border: .5px solid var(--border-color);
     border-radius: 10px;
     margin: 0;
 }
@@ -170,14 +197,12 @@ body {
 .hero-infor h1 {
     font-family: 'Public Sans', sans-serif;
     font-size: 3rem;
-    color: #141010;
     margin:0;
     margin-top: 0.9rem;
 }
 
 .hero-infor p {
     width: 80%;
-    color: #141010;
     margin: 0;
     margin-top: 0.9rem;
     font-size: 1.12rem;
@@ -194,9 +219,9 @@ body {
 .hero-btn a {
     text-decoration: none;
     padding: 12px 32px;
-    background-color: #141010;
+    background-color: var(--text-color);
     margin-bottom: 7px;
-    color: #ffffff;
+    color: var(--option);
     border-radius: 10px;
     transition: all .2s ease;
 }
@@ -213,7 +238,7 @@ body {
     border-radius: 20px;
     margin-top: 30px;
     margin-bottom: 20px;
-    background-color: #efeef2;
+    background-color: var(--card-color-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,7 +251,7 @@ body {
     height: 250px;
     overflow: hidden;
     border-radius: 16px;
-    background-color: #312222;
+    background-color: var(--rating-card);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,7 +260,7 @@ body {
 
 .hero-banner-card-rating h1{
     font-size: 48px;
-    color: #ffffff;
+    color: var(--option);
     margin: 0;
 }
 
@@ -249,16 +274,16 @@ body {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    color: #ffffff;
+    color: var(--option);
 }
 
 .hero-banner-card-rating span {
     margin-top: 12px;
-    color: #ffffff;
+    color: var(--option);
 }
 
 .hero-banner-card-rating a {
-    color: #0672F3;
+    color: var(--text-color-secondary);
     margin-top: 26px;
 }
 
@@ -267,9 +292,9 @@ body {
     max-width: 200px;
     height: 250px;
     overflow: hidden;
-    border: 1.5px solid #14101057;
+    border: 1.5px solid var(--border-color);
     border-radius: 16px;
-    background-color: #F7F6F9;
+    background-color: var(--card-color-primary);
     display: flex;
     align-items: left;
     flex-direction: column;
@@ -278,7 +303,7 @@ body {
 .icon {
     width: 40px;
     height: 38px;
-    background-color: #ffffff;
+    background-color: var(--option);
     margin: 0;
     margin-top: 25px;
     margin-left: 22px;
@@ -286,13 +311,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0672F3;
+    color: var(--text-color-secondary);
 }
 
 .hero-banner-card h1 {
     font-family: 'Public Sans' sans-serif;
     font-size: 18px;
-    color: #141010;
     margin: 0;
     margin-top: 80px;
     margin-left: 22px;
@@ -302,7 +326,6 @@ body {
     width: 85%;
     font-size: 12px;
     font-weight: 300;
-    color: #141010;
     margin-left: 22px;
 }
 
@@ -346,8 +369,8 @@ body {
     width: 324px;
     height: 340px;
     overflow: hidden;
-    background-color: #F7F6F9;
-    border: 1px solid #DDD1D1;
+    background-color: var(--card-color-primary);
+    border: 1px solid var(--border-color);
     border-radius: 18px;
     margin: 6px;
     display: flex;
@@ -368,7 +391,7 @@ body {
     text-decoration: none;
     cursor: default;
     padding: 16px;
-    background-color: #ffffff;
+    background-color: var(--option);
     color: #141010;
     border-radius: 10px;
     font-size: 24px;
@@ -387,7 +410,7 @@ body {
 }
 
 .service-card:hover{
-    background-color: #efeff2;
+    background-color: var(--card-color-secondary);
     transform: scale(1.02);
 }
 
@@ -396,7 +419,7 @@ body {
     max-width: 1050px;
     margin: 0 auto;
     height: auto;
-    background-color: #312222;
+    background-color: var(--rating-card);
     border-radius: 20px;
     margin-bottom: 10px;
     padding: 40px 45px;
@@ -408,7 +431,7 @@ body {
 .left-cols {
     width: 45%;
     text-align: left;
-    color: #ffffff;
+    color: var(--option);
     font-family: "Public Sans", sans-serif;
 }
 
@@ -419,7 +442,7 @@ body {
 }
 
 .left-cols span {
-    color: #0672F3;
+    color: var(--text-color-secondary);
 }
 
 .left-cols a {
@@ -427,15 +450,15 @@ body {
     color: #141010;
     font-size: 18px;
     padding: 14px 24px;
-    background-color: #ffffff;
+    background-color: var(--option);
     border-radius: 10px;
     margin-top: 10px;
     transition: all .2s ease;
 }
 
 .left-cols a:hover {
-    background-color: #141010;
-    color: #ffffff;
+    background-color: var(--text-color);
+    color: var(--option);
 }
 
 .right-cols {
@@ -449,7 +472,7 @@ body {
     width: 90%;
     font-size: 18px;
     font-weight: 300;
-    color: #ffffff;
+    color: var(--option);
     text-align: left;
     line-height: 1.7;
 }
@@ -466,8 +489,8 @@ body {
     max-width: 1050px;
     margin: 0 auto;
     height: auto;
-    background-color: #F7F6F9;
-    border: 1px solid #a1838348;
+    background-color: var(--card-color-primary);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     margin-top: 30px;
     padding: 40px 45px;
@@ -497,7 +520,7 @@ body {
     width: 430px;
     height: 380px;
     overflow: hidden;
-    background-color: #efeff2;
+    background-color: var(--card-color-secondary);
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -530,9 +553,9 @@ body {
 .style-name i {
     padding: 18px 22px;
     border-radius: 0px 0px 0px 10px;
-    background-color: #141010;
+    background-color: var(--text-color);
     margin: 0;
-    color: #ffffff;
+    color: var(--option);
     display: inline-block;
 }
 
@@ -593,7 +616,7 @@ body {
     width: 55%;
     height: auto;
     overflow: hidden;
-    background-color: #efeff2;
+    background-color: var(--card-color-secondary);
     border-radius: 18px;
     padding: 20px 30px;
 }
@@ -649,7 +672,7 @@ body {
     width: 30%;
     height: 300px;
     overflow: hidden;
-    background-color: #efeff2;
+    background-color: var(--card-color-secondary);
     padding: 20px;
     border-radius: 18px;
     display: flex;
@@ -706,8 +729,8 @@ body {
     width: 315px;
     height: 215px;
     overflow: hidden;
-    background-color: #ffffff;
-    border: 1px solid #E8E7EE;
+    background-color: var(--option);
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -748,7 +771,7 @@ body {
     width: 484px;
     height: 310px;
     overflow: hidden;
-    border: 1px solid #31222263;
+    border: 1px solid var(--border-color);
     border-radius: 18px;
     position: relative;
 }
@@ -785,12 +808,12 @@ body {
 .project-card-overlay h1 {
     font-family: "Public Sans", sans-serif;
     font-size: 38px;
-    color: #ffffff;
+    color: var(--text-color-optional);
 }
 
 .project-card-overlay p {
     width: 75%;
-    color: #ffffff;
+    color: var(--text-color-optional);
     font-size: 18px;
     font-weight: 400;
 }
@@ -799,7 +822,7 @@ body {
     font-weight: 500;
     font-size: 20px;
     padding: 20px;
-    background-color: #14101098;
+    background-color: var(--rating-card);
     border-radius: 50%;
     color: #ffffff;
     margin-top: 12px;
@@ -820,7 +843,7 @@ body {
     max-width: 1140px;
     height: 300px;
     overflow: hidden;
-    background-color: #141010;
+    background-color: var(--rating-card);
     margin: 0 auto;
     border-radius: 20px;
     display: flex;
@@ -832,16 +855,16 @@ body {
 
 .contact-card h1 {
     font-size: 48px;
-    color: #ffffff;
+    color: var(--option);
 }
 
 .contact-card span {
-    color: #0672F3;
+    color: var(--text-color-secondary);
 }
 
 .contact-card i {
     font-size: 32px;
-    color: #ffffff;
+    color: var(--option);
     margin-top: 16px;
 }
 
@@ -875,7 +898,7 @@ body {
 .contact-section span {
     font-size: 1.12rem;
     padding: 10px 24px;
-    border: .5px solid #141010;
+    border: .5px solid var(--rating-card);
     border-radius: 10px;
     margin: 0;
     margin-top: 16px;
@@ -886,7 +909,7 @@ body {
     margin: 0;
     margin-top: 16px;
     font-family: "Public Sans", sans-serif;
-    color: #141010;
+    color: var(--text-color);
 }
 
 .contact-section p {
@@ -895,7 +918,7 @@ body {
     margin: 0;
     margin-top: 18px;
     margin-bottom: 45px;
-    color: #141010;
+    color: var(--text-color);
 }
 
 .contact-content {
@@ -914,8 +937,8 @@ body {
     height: 515px;
     overflow: hidden;
     padding: 25px;
-    background-color: #F7F6F9;
-    border: 2px solid #31222221;
+    background-color: var(--card-color-primary);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -927,7 +950,7 @@ body {
 .contact-left-cols h1 {
     font-size: 28px;
     font-family: "Public Sans", sans-serif;
-    color: #141010;
+    color: var(--text-color);
     margin-top: 8px;
     margin-bottom: 6px;
 }
@@ -942,7 +965,7 @@ body {
     width: 100%;
     height: 64px;
     overflow: hidden;
-    background-color:  #ffffff;
+    background-color: var(--option);
     margin: 0;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -964,8 +987,8 @@ body {
     margin-left: 16px;
     padding: 12px 12px;
     border-radius: 6px;
-    color: #ffffff;
-    background-color: #0672F3;
+    color: var(--option);
+    background-color: var(--text-color-secondary);
 }
 
 .cols-right {
@@ -976,7 +999,7 @@ body {
 
 .cols-right small {
     font-size: 18px;
-    color: #2b38318b;
+    color: var(--rating-card);
     margin: 0;
 }
 
@@ -1001,16 +1024,16 @@ body {
 .social-media i {
     font-size: 18px;
     padding: 16px;
-    color: #0672F3;
-    background-color: #ffffff;
+    color: var(--text-color-secondary);
+    background-color: var(--option);
     border-radius: 10px;
     transition: all .3s ease;
     cursor: pointer;
 }
 
 .social-media i:hover {
-    background-color: #141010;
-    color: #ffffff;
+    background-color: var(--text-color);
+    color: var(--option);
 }
 
 .contact-right-cols {
@@ -1018,8 +1041,8 @@ body {
     height: 515px;
     overflow: hidden;
     padding: 25px 32px;
-    background-color: #F7F6F9;
-    border: 2px solid #31222221;
+    background-color: var(--card-color-primary);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -1035,7 +1058,7 @@ body {
 
 .name-form label{
     font-size: 16px;
-    color: #4f4f4fb9;
+    color: var(--text-color);
     margin-left: 10px;
 }
 
@@ -1068,8 +1091,8 @@ body {
     height: 45px;
     border-radius: 12px;
     border: none;
-    color: #ffffff;
-    background-color: #0672F3;
+    color: var(--option);
+    background-color: var(--text-color-secondary);
     cursor: pointer;
 }
 
