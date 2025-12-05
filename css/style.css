@@ -13,6 +13,7 @@
     --border-color: #DDD1D1;
     --option: #ffffff;
 }
+
 /* darkmode-color-ways */
 #darkmode {
     --background-color: #141010;       
@@ -42,7 +43,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     font-family: "Inter", sans-serif;
-    /* font-family: "Public Sans", sans-serif; */
+    /* font-family: "Public Sans", sans-serif; */   
 }
 
 /* navbar section */
